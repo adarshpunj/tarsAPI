@@ -10,8 +10,9 @@ def movie(moviename):
     return JSONObject
 
 def getJSON(moviename):
-
     movienameAsString=str(moviename)
+    if movienameAsString=="moviename":
+        return "Please replace 'moviename' with a movie title. For instance, http://localhost:5000/movie/inception"
     movienameAsString=movienameAsString.replace(' ','+')
     rawLink="http://www.imdb.com/find?&q="
     imdbLink=rawLink+movienameAsString
