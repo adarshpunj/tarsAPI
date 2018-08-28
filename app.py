@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-@app.route("/movie/<moviename>")
+@app.route("/subtitle/<moviename>")
 def movie(moviename):
     JSONObject = getJSON(moviename)
     return JSONObject
